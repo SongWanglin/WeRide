@@ -1,2 +1,0 @@
-# WeRide
-Uber-like app
