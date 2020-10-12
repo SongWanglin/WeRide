@@ -1,0 +1,1049 @@
+<html jstcache="0">
+<head>
+    <style>.gm-style .transit-container {
+        background-color: white;
+        max-width: 265px;
+        overflow-x: hidden
+    }
+
+    .gm-style .transit-container .transit-title span {
+        font-size: 14px;
+        font-weight: 500
+    }
+
+    .gm-style .transit-container .transit-title {
+        padding-bottom: 6px
+    }
+
+    .gm-style .transit-container .transit-wheelchair-icon {
+        background: transparent url('https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png');
+        background-size: 59px 492px;
+        display: inline-block;
+        background-position: -5px -450px;
+        width: 13px;
+        height: 13px
+    }
+
+    .gm-style.gm-china .transit-container .transit-wheelchair-icon {
+        background-image: url('http://maps.gstatic.cn/mapfiles/api-3/images/mapcnt6.png')
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 1.2),(min-resolution: 1.2dppx),(min-resolution: 116dpi) {
+        .gm-style .transit-container .transit-wheelchair-icon {
+            background-image: url('https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6_hdpi.png');
+            background-size: 59px 492px;
+            display: inline-block;
+            background-position: -5px -449px;
+            width: 13px;
+            height: 13px
+        }
+
+        .gm-style.gm-china .transit-container .transit-wheelchair-icon {
+            background-image: url('http://maps.gstatic.cn/mapfiles/api-3/images/mapcnt6_hdpi.png')
+        }
+    }
+
+    .gm-style .transit-container div {
+        background-color: white;
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 15px
+    }
+
+    .gm-style .transit-container .transit-line-group {
+        overflow: hidden;
+        margin-right: -6px
+    }
+
+    .gm-style .transit-container .transit-line-group-separator {
+        border-top: 1px solid #e6e6e6;
+        padding-top: 5px
+    }
+
+    .gm-style .transit-container .transit-nlines-more-msg {
+        color: #999;
+        margin-top: -3px;
+        padding-bottom: 6px
+    }
+
+    .gm-style .transit-container .transit-line-group-vehicle-icons {
+        display: inline-block;
+        padding-right: 10px;
+        vertical-align: top;
+        margin-top: 1px
+    }
+
+    .gm-style .transit-container .transit-line-group-content {
+        display: inline-block;
+        min-width: 100px;
+        max-width: 228px;
+        margin-bottom: -3px
+    }
+
+    .gm-style .transit-container .transit-clear-lines {
+        clear: both
+    }
+
+    .gm-style .transit-container .transit-div-line-name {
+        float: left;
+        padding: 0 6px 6px 0;
+        white-space: nowrap
+    }
+
+    .gm-style .transit-container .transit-div-line-name .gm-transit-long {
+        width: 107px
+    }
+
+    .gm-style .transit-container .transit-div-line-name .gm-transit-medium {
+        width: 50px
+    }
+
+    .gm-style .transit-container .transit-div-line-name .gm-transit-short {
+        width: 37px
+    }
+
+    .gm-style .transit-div-line-name .renderable-component-icon {
+        float: left;
+        margin-right: 2px
+    }
+
+    .gm-style .transit-div-line-name .renderable-component-color-box {
+        background-image: url(https://maps.gstatic.com/mapfiles/transparent.png);
+        height: 10px;
+        width: 4px;
+        float: left;
+        margin-top: 3px;
+        margin-right: 3px;
+        margin-left: 1px
+    }
+
+    .gm-style.gm-china .transit-div-line-name .renderable-component-color-box {
+        background-image: url(http://maps.gstatic.cn/mapfiles/transparent.png)
+    }
+
+    .gm-style .transit-div-line-name .renderable-component-text {
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block
+    }
+
+    .gm-style .transit-div-line-name .renderable-component-text-box {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        font-size: 8pt;
+        font-weight: 400;
+        text-align: center;
+        padding: 1px 2px
+    }
+
+    .gm-style .transit-div-line-name .renderable-component-text-box-white {
+        border: solid 1px #ccc;
+        background-color: white;
+        padding: 0 2px
+    }
+
+    .gm-style .transit-div-line-name .renderable-component-bold {
+        font-weight: 400
+    }
+    </style>
+    <style>.poi-info-window div, .poi-info-window a {
+        color: #333;
+        font-family: Roboto, Arial;
+        font-size: 13px;
+        background-color: white;
+        -moz-user-select: text;
+        -webkit-user-select: text;
+        -ms-user-select: text;
+        user-select: text
+    }
+
+    .poi-info-window {
+        cursor: default
+    }
+
+    .poi-info-window a:link {
+        text-decoration: none;
+        color: #427fed
+    }
+
+    .poi-info-window .view-link, .poi-info-window a:visited {
+        color: #427fed
+    }
+
+    .poi-info-window .view-link:hover, .poi-info-window a:hover {
+        cursor: pointer;
+        text-decoration: underline
+    }
+
+    .poi-info-window .full-width {
+        width: 180px
+    }
+
+    .poi-info-window .title {
+        overflow: hidden;
+        font-weight: 500;
+        font-size: 14px
+    }
+
+    .poi-info-window .address {
+        margin-top: 2px;
+        color: #555
+    }
+    </style>
+    <style>.gm-style .gm-style-iw {
+        font-weight: 300;
+        font-size: 13px;
+        overflow: hidden
+    }
+
+    .gm-style .gm-style-iw-a {
+        position: absolute;
+        width: 9999px;
+        height: 0
+    }
+
+    .gm-style .gm-style-iw-t {
+        position: absolute;
+        width: 100%
+    }
+
+    .gm-style .gm-style-iw-t::after {
+        background: linear-gradient(45deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 100%);
+        box-shadow: -2px 2px 2px 0 rgba(178, 178, 178, .4);
+        content: "";
+        height: 15px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        width: 15px
+    }
+
+    .gm-style .gm-style-iw-c {
+        position: absolute;
+        box-sizing: border-box;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -100%);
+        background-color: white;
+        border-radius: 8px;
+        padding: 12px;
+        box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.3)
+    }
+
+    .gm-style .gm-style-iw-d {
+        box-sizing: border-box;
+        overflow: auto
+    }
+
+    .gm-style .gm-style-iw-d::-webkit-scrollbar {
+        width: 18px;
+        height: 12px;
+        -webkit-appearance: none
+    }
+
+    .gm-style .gm-style-iw-d::-webkit-scrollbar-track, .gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece {
+        background: #fff
+    }
+
+    .gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.12);
+        border: 6px solid transparent;
+        border-radius: 9px;
+        background-clip: content-box
+    }
+
+    .gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-thumb:horizontal {
+        border: 3px solid transparent
+    }
+
+    .gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(0, 0, 0, 0.3)
+    }
+
+    .gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-corner {
+        background: transparent
+    }
+
+    .gm-style .gm-iw {
+        color: #2c2c2c
+    }
+
+    .gm-style .gm-iw b {
+        font-weight: 400
+    }
+
+    .gm-style .gm-iw a:link, .gm-style .gm-iw a:visited {
+        color: #4272db;
+        text-decoration: none
+    }
+
+    .gm-style .gm-iw a:hover {
+        color: #4272db;
+        text-decoration: underline
+    }
+
+    .gm-style .gm-iw .gm-title {
+        font-weight: 400;
+        margin-bottom: 1px
+    }
+
+    .gm-style .gm-iw .gm-basicinfo {
+        line-height: 18px;
+        padding-bottom: 12px
+    }
+
+    .gm-style .gm-iw .gm-website {
+        padding-top: 6px
+    }
+
+    .gm-style .gm-iw .gm-photos {
+        padding-bottom: 8px;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none
+    }
+
+    .gm-style .gm-iw .gm-sv, .gm-style .gm-iw .gm-ph {
+        cursor: pointer;
+        height: 50px;
+        width: 100px;
+        position: relative;
+        overflow: hidden
+    }
+
+    .gm-style .gm-iw .gm-sv {
+        padding-right: 4px
+    }
+
+    .gm-style .gm-iw .gm-wsv {
+        cursor: pointer;
+        position: relative;
+        overflow: hidden
+    }
+
+    .gm-style .gm-iw .gm-sv-label, .gm-style .gm-iw .gm-ph-label {
+        cursor: pointer;
+        position: absolute;
+        bottom: 6px;
+        color: #fff;
+        font-weight: 400;
+        text-shadow: rgba(0, 0, 0, 0.7) 0 1px 4px;
+        font-size: 12px
+    }
+
+    .gm-style .gm-iw .gm-stars-b, .gm-style .gm-iw .gm-stars-f {
+        height: 13px;
+        font-size: 0
+    }
+
+    .gm-style .gm-iw .gm-stars-b {
+        position: relative;
+        background-position: 0 0;
+        width: 65px;
+        top: 3px;
+        margin: 0 5px
+    }
+
+    .gm-style .gm-iw .gm-rev {
+        line-height: 20px;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none
+    }
+
+    .gm-style.gm-china .gm-iw .gm-rev {
+        display: none
+    }
+
+    .gm-style .gm-iw .gm-numeric-rev {
+        font-size: 16px;
+        color: #dd4b39;
+        font-weight: 400
+    }
+
+    .gm-style .gm-iw.gm-transit {
+        margin-left: 15px
+    }
+
+    .gm-style .gm-iw.gm-transit td {
+        vertical-align: top
+    }
+
+    .gm-style .gm-iw.gm-transit .gm-time {
+        white-space: nowrap;
+        color: #676767;
+        font-weight: bold
+    }
+
+    .gm-style .gm-iw.gm-transit img {
+        width: 15px;
+        height: 15px;
+        margin: 1px 5px 0 -20px;
+        float: left
+    }
+    </style>
+    <style>.gm-iw {
+        text-align: left;
+    }
+
+    .gm-iw .gm-numeric-rev {
+        float: left;
+    }
+
+    .gm-iw .gm-photos, .gm-iw .gm-rev {
+        direction: ltr;
+    }
+
+    .gm-iw .gm-stars-f, .gm-iw .gm-stars-b {
+        background: url("https://maps.gstatic.com/mapfiles/api-3/images/review_stars_hdpi.png") no-repeat;
+        background-size: 65px 26px;
+        float: left;
+    }
+
+    .gm-iw .gm-stars-f {
+        background-position: left -13px;
+    }
+
+    .gm-iw .gm-sv-label, .gm-iw .gm-ph-label {
+        left: 4px;
+    }</style>
+    <style>.gm-style .gm-style-mtc label, .gm-style .gm-style-mtc div {
+        font-weight: 400
+    }
+    </style>
+    <style>.gm-control-active > img {
+        box-sizing: content-box;
+        display: none;
+        left: 50%;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .gm-control-active > img:nth-child(1) {
+        display: block
+    }
+
+    .gm-control-active:hover > img:nth-child(1), .gm-control-active:active > img:nth-child(1) {
+        display: none
+    }
+
+    .gm-control-active:hover > img:nth-child(2), .gm-control-active:active > img:nth-child(3) {
+        display: block
+    }
+    </style>
+    <link type="text/css" rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans">
+    <style>.gm-ui-hover-effect {
+        opacity: .6
+    }
+
+    .gm-ui-hover-effect:hover {
+        opacity: 1
+    }
+    </style>
+    <style>.gm-style .gm-style-cc span, .gm-style .gm-style-cc a, .gm-style .gm-style-mtc div {
+        font-size: 10px;
+        box-sizing: border-box
+    }
+    </style>
+    <style>@media print {
+        .gm-style .gmnoprint, .gmnoprint {
+            display: none
+        }
+    }
+
+    @media screen {
+        .gm-style .gmnoscreen, .gmnoscreen {
+            display: none
+        }
+    }</style>
+    <style>.gm-style-pbc {
+        transition: opacity ease-in-out;
+        background-color: rgba(0, 0, 0, 0.45);
+        text-align: center
+    }
+
+    .gm-style-pbt {
+        font-size: 22px;
+        color: white;
+        font-family: Roboto, Arial, sans-serif;
+        position: relative;
+        margin: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%)
+    }
+    </style>
+    <style>.gm-style img {
+        max-width: none;
+    }
+
+    .gm-style {
+        font: 400 11px Roboto, Arial, sans-serif;
+        text-decoration: none;
+    }</style>
+    <title>WeRide</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script language="JavaScript" src="showLocation.js">
+    </script>
+    <script type="text/javascript" charset="UTF-8"
+            src="https://maps.googleapis.com/maps-api-v3/api/js/38/10/common.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+            src="https://maps.googleapis.com/maps-api-v3/api/js/38/10/util.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+            src="https://maps.googleapis.com/maps-api-v3/api/js/38/10/map.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+            src="https://maps.googleapis.com/maps-api-v3/api/js/38/10/onion.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+            src="https://maps.googleapis.com/maps-api-v3/api/js/38/10/controls.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+            src="https://maps.googleapis.com/maps-api-v3/api/js/38/10/marker.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+            src="https://maps.googleapis.com/maps-api-v3/api/js/38/10/infowindow.js"></script>
+</head>
+<body jstcache="0">
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="Home.html" class="w3-bar-item w3-button"><b>WeRide</b></a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-left w3-hide-small">
+            <a href="Home.html" class="w3-bar-item w3-button">Home</a>
+            <a href="#about" class="w3-bar-item w3-button">About</a>
+        </div>
+        <div class="w3-right w3-hide-small">
+            <a href="Login" class="w3-bar-item w3-button">Login</a>
+            <a href="Logout" class="w3-bar-item w3-button" style="background-color: lightcyan; color: black">Logout</a>
+            <a href="Registration" class="w3-bar-item w3-button" style="background-color: green; color: white">Sign
+                up</a>
+            <a href="ViewOrder" class="w3-bar-item w3-button">Trip History</a>
+            <a href="ViewReview" class="w3-bar-item w3-button">View Comments</a>
+
+        </div>
+    </div>
+</div>
+
+
+<title>WeRide</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script language="JavaScript" src="showLocation.js">
+</script>
+
+
+<!--<div id="warnings-panel"></div>-->
+<script type="text/javascript"
+        src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyCpsqz2P5Mtip-IhK5PxRc6XKnJKM2zVAU"></script>
+<script type="text/javascript">
+
+    var directionDisplay;
+
+    var directionsService = new google.maps.DirectionsService();
+
+    var map;
+    var pos8;
+    // var origin = document.getElementById("start").value;
+    //
+    //
+    // var geocoder = new google.maps.Geocoder();
+    // var address = jQuery('#address').val();
+    // // window.alert(origin);
+    // geocoder.geocode( { 'address': origin}, function(results, status) {
+    //
+    //     if (status == google.maps.GeocoderStatus.OK) {
+    //         var latitude = results[0].geometry.location.lat();
+    //         var longitude = results[0].geometry.location.lng();
+    //         jQuery('#coordinates').val(latitude + ', ' + longitude);
+    //         var pos = {
+    //             lat: latitude, lng: longitude
+    //         }
+    //     }
+
+    function initialize() {
+
+        directionsDisplay = new google.maps.DirectionsRenderer();
+
+        var chicago = new google.maps.LatLng(41.8387343, -87.6295878);
+        // var originalLocation = document.getElementById("start").value;
+        var myOptions = {
+
+            zoom: 15,
+
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+
+            center: chicago
+
+        }
+        if (navigator.geolocation) {
+            //获取当前地理位置
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var coords = position.coords;
+                map = new google.maps.Map(document.getElementById("map"), myOptions);
+                directionsDisplay.setMap(map);
+                var pos = {
+                    // lat:originalLocation.
+                    // lat: 41.8387343, lng: -87.6295878
+                    lat:coords.latitude,lng:coords.longitude
+                }
+                var marker = new google.maps.Marker({
+                    position: pos,
+                    map: map,
+                    icon:"image/man.png"
+                     // label: "Me",
+                    // title: 'YOU ARE HERE!'
+                });
+            });
+        }
+        // directionsDisplay.setMap(map);
+        // var pos = {
+        //    // lat:originalLocation.
+        //     lat: 41.8387343, lng: -87.6295878
+        // }
+        // var marker = new google.maps.Marker({
+        //     position: pos,
+        //     map: map,
+        //     // label: "Me",
+        //     title: 'YOU ARE HERE!'
+        // });
+
+    }
+
+    function calcRoute() {
+        var start = document.getElementById("start").value;
+        var end = document.getElementById("end").value;
+        var distanceInput = document.getElementById("distance");
+        var price = document.getElementById("price");
+        var type = document.getElementById("type").value;
+        var travelTime = document.getElementById("travelTime");
+        var ArrivalTime = document.getElementById("ArrivalTime");
+        //var pickTime = document.getElementById("pickTime").value;
+        var waitingTime = document.getElementById("waitingTime").value;
+        //get the time
+
+
+
+        var request = {
+            origin: start,
+            destination: end,
+            travelMode: google.maps.DirectionsTravelMode.DRIVING
+        };
+        directionsService.route(request, function (response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                directionsDisplay.setDirections(response);
+                distanceInput.value = response.routes[0].legs[0].distance.value / 1000;
+                travelTime.value = (parseFloat(distanceInput.value / 0.805)).toFixed(2);
+                var trueTime = (travelTime.value*60 - 1194.1952)/1483.533037;
+                var distance = (distanceInput.value/1.609 - 5.2256669)/6.38284;
+                //！！！！use ML(linear model) to get the price
+                if (type == "Economy") {
+                    // price.value = (2.2 + distanceInput.value * 1.29 * 0.621371).toFixed(2);
+                    price.value = (trueTime * 1.99052501 + 16.6702642 * distance + 21.27599536).toFixed(2);
+                } else if (type == "Comfort") {
+                    price.value = 1.4*(trueTime * 1.99052501 + 16.6702642 * distance + 21.27599536).toFixed(2);
+                } else if (type == "SUV") {
+                    price.value = 1.6*(trueTime * 1.99052501 + 16.6702642 * distance + 21.27599536).toFixed(2);
+                } else {
+                    price.value =2*(trueTime * 1.99052501 + 16.6702642 * distance + 21.27599536).toFixed(2);
+                }
+
+                var now1 = new Date();
+                var m = now1.getTime();
+                now1.setTime(m + waitingTime * 60 * 1000 + travelTime.value * 60 * 1000);
+                var hhh = now1.getHours();
+                var mmm = now1.getMinutes();
+                ArrivalTime.value = hhh + ":" + mmm;
+            }
+        });
+
+    }
+function connectDriver() {
+    var type = document.getElementById("type").value;
+    if (type == "Economy") {
+        OpenWindow = window.open("", "driver", "height=250, width=250,top=300%,left=550%, toolbar=no ,scrollbars=" + scroll + ",menubar=yes");
+        OpenWindow.document.write("<TITLE>Driver Information：</TITLE>");
+        OpenWindow.document.write("<BODY BGCOLOR=#ffffff>")
+        OpenWindow.document.write("<h4>Driver Name:" + "&nbsp;&nbsp;&nbsp;" + "Keith Moore" + "</h4>")
+        //<button class="box3" type="submit">Trip Completed</button>
+        // OpenWindow.document.write("<form action='getRate'><input type='text' name='driver' readonly='true' value='Wade Johnson'>"+"<button type='submit'>View rates about him</button>" +"</form>")
+        OpenWindow.document.write("<img height='100' width='100' src=image/1.jpg >");
+        OpenWindow.document.write("<h4>CarModel:" + "&nbsp;&nbsp;&nbsp;" + "toyota yaris" + "</h4>")
+        OpenWindow.document.write("<h4>CarNumber:" + "&nbsp;&nbsp;&nbsp;" + "BVU 9390" + "</h4>")
+        OpenWindow.document.write("<img height='100' width='150' src=image/1.1.jpeg >");
+        // OpenWindow.document.write("<h4>Rate:" + "&nbsp;&nbsp;&nbsp;" + "4.89/5" + "</h4>")
+        OpenWindow.document.write("<p><a href='getRate'class='w3-bar-item w3-button'>" +"View score about him" +"</a></p>")
+        // <button class="box3" onclick="calcRoute()">Start the trip</button>
+        OpenWindow.document.write("</BODY>")
+        OpenWindow.document.write("</HTML>")
+        OpenWindow.document.close()
+    }
+    if (type == "Comfort") {
+        OpenWindow = window.open("", "driver", "height=250, width=250,width=250,top=300%,left=550%,toolbar=no ,scrollbars=" + scroll + ",menubar=yes");
+        OpenWindow.document.write("<TITLE>Driver Information：</TITLE>");
+        OpenWindow.document.write("<BODY BGCOLOR=#ffffff>")
+        // OpenWindow.document.write(("<form action='getRate1'><input type='text' name='driver1' readonly='true' value='Keith Moore'>"+"<button type='submit'>View rates about him</button>" +"</form>")
+        OpenWindow.document.write("<h4>Driver Name:" + "&nbsp;&nbsp;&nbsp;" + "Keith Moore" + "</h4>")
+        OpenWindow.document.write("<img height='100' width='100' src=image/2.jpg >");
+        OpenWindow.document.write("<h4>CarModel:" + "&nbsp;&nbsp;&nbsp;" + "toyota camry" + "</h4>")
+        OpenWindow.document.write("<h4>CarNumber:" + "&nbsp;&nbsp;&nbsp;" + "GSY 1763" + "</h4>")
+        OpenWindow.document.write("<img height='100' width='150' src=image/2.1.jpeg >");
+        // OpenWindow.document.write("<h4>Rate:" + "&nbsp;&nbsp;&nbsp;" + "4.56/5" + "</h4>")
+        OpenWindow.document.write("<p><a href='getRate1'class='w3-bar-item w3-button'>" +"View score about him" +"</a></p>")
+        // <img src='images/FitnessWatches/"
+        // + fitnessWatch.getImage() + "' alt='' />
+        OpenWindow.document.write("</BODY>")
+        OpenWindow.document.write("</HTML>")
+        OpenWindow.document.close()
+    }
+    if (type == "SUV") {
+        OpenWindow = window.open("", "driver", "height=250, width=250,width=250,top=300%,left=550%,toolbar=no ,scrollbars=" + scroll + ",menubar=yes");
+        OpenWindow.document.write("<TITLE>Driver Information：</TITLE>");
+        OpenWindow.document.write("<BODY BGCOLOR=#ffffff>")
+         // OpenWindow.document.write(("<form action='getRate2'><input type='text' name='driver2' readonly='true' value='Stanley Haywood'>"+"<button type='submit'>View rates about him</button>" +"</form>")
+        OpenWindow.document.write("<h4>Driver Name:" + "&nbsp;&nbsp;&nbsp;" + "Stanley Haywood" + "</h4>")
+        OpenWindow.document.write("<img height='100' width='100' src=image/3.jpg >");
+        OpenWindow.document.write("<h4>CarModel:" + "&nbsp;&nbsp;&nbsp;" + "Land Rover LR4" + "</h4>")
+        OpenWindow.document.write("<h4>CarNumber:" + "&nbsp;&nbsp;&nbsp;" + "PRN 4846" + "</h4>")
+        OpenWindow.document.write("<img height='100' width='150' src=image/3.1.jpeg >");
+        OpenWindow.document.write("<p><a href='getRate2'class='w3-bar-item w3-button'>" +"View score about him" +"</a></p>")
+        // OpenWindow.document.write("<h4>Rate:" + "&nbsp;&nbsp;&nbsp;" + "4.99/5" + "</h4>")
+        // <img src='images/FitnessWatches/"
+        // + fitnessWatch.getImage() + "' alt='' />
+        OpenWindow.document.write("</BODY>")
+        OpenWindow.document.write("</HTML>")
+        OpenWindow.document.close()
+    }
+    if(type == "Sports Car") {
+        OpenWindow = window.open("", "driver", "height=250, width=250,width=250,top=300%,left=550%,toolbar=no ,scrollbars=" + scroll + ",menubar=yes");
+        OpenWindow.document.write("<TITLE>Driver Information：</TITLE>");
+        OpenWindow.document.write("<BODY BGCOLOR=#ffffff>")
+        // OpenWindow.document.write(("<form action='getRate3'><input type='text' name='driver3' readonly='true' value='Frances Evans'>"+"<button type='submit'>View rates about him</button>" +"</form>")
+        OpenWindow.document.write("<h4>Driver Name:" + "&nbsp;&nbsp;&nbsp;" + "Frances Evans" + "</h4>")
+        OpenWindow.document.write("<img height='100' width='100' src=image/4.jpg >");
+        OpenWindow.document.write("<h4>CarModel:" + "&nbsp;&nbsp;&nbsp;" + "maserati SQ4" + "</h4>")
+        OpenWindow.document.write("<h4>CarNumber:" + "&nbsp;&nbsp;&nbsp;" + "VFL 3249" + "</h4>")
+        OpenWindow.document.write("<img height='100' width='150' src=image/4.1.jpg >");
+        OpenWindow.document.write("<p><a href='getRate3'class='w3-bar-item w3-button'>" +"View score about him" +"</a></p>")
+        // OpenWindow.document.write("<h4>Rate:" + "&nbsp;&nbsp;&nbsp;" + "4.88/5" + "</h4>")
+        // <img src='images/FitnessWatches/"
+        // + fitnessWatch.getImage() + "' alt='' />
+        OpenWindow.document.write("</BODY>")
+        OpenWindow.document.write("</HTML>")
+        OpenWindow.document.close()
+    }
+}
+function nearby() {
+    var origin = document.getElementById("start").value;
+    // var pos8;
+
+    var geocoder = new google.maps.Geocoder();
+    var address = jQuery('#address').val();
+    // window.alert(origin);
+    geocoder.geocode( { 'address': origin}, function(results, status) {
+
+        if (status == google.maps.GeocoderStatus.OK) {
+            var latitude = results[0].geometry.location.lat();
+            var longitude = results[0].geometry.location.lng();
+            jQuery('#coordinates').val(latitude+', '+longitude);
+            var pos = {
+                lat: latitude, lng: longitude,
+            }
+            var mycenter={
+                zoom:15,
+                center:pos
+            }
+            map = new google.maps.Map(document.getElementById("map"), mycenter);
+
+            directionsDisplay.setMap(map);
+
+            var pos1 = {
+                lat: pos.lat + Math.random() / 95.0570342, lng: pos.lng - Math.random() / 111.111111
+            }
+            //return pos1;
+            var pos2 = {
+                lat: pos.lat - Math.random() / 95.0570342, lng: pos.lng + Math.random() / 111.111111
+            }
+            var pos3 = {
+                lat: pos.lat + Math.random() / 95.0570342, lng: pos.lng - Math.random() / 111.111111
+            }
+            var pos4 = {
+                lat: pos.lat - Math.random() / 95.0570342, lng: pos.lng + Math.random() / 111.111111
+            }
+            var pos5 = {
+                lat: pos.lat + Math.random() / 95.0570342, lng: pos.lng - Math.random() / 111.111111
+            }
+            var pos6 = {
+                lat: pos.lat - Math.random() / 95.0570342, lng: pos.lng + Math.random() / 111.111111
+            }
+            var pos7 = {
+                lat: pos.lat + Math.random() / 95.0570342, lng: pos.lng - Math.random() / 111.111111
+            }
+            pos8 = {
+                lat: pos.lat + 0.05 / 95.0570342, lng: pos.lng + 0.05 / 111.111111
+            }
+
+            var marker = new google.maps.Marker({
+                position: pos,
+                map: map,
+                // label: "Origination",
+                // title: 'YOU ARE HERE!'
+                icon:"image/man.png"
+            });
+            var marker1 = new google.maps.Marker({
+                position: pos1,
+                map: map,
+                //label: "DriverA",
+                icon: "image/car1.png"
+                //title: 'YOU ARE HERE!'
+            });
+            var marker2 = new google.maps.Marker({
+                position: pos2,
+                map: map,
+                // label: "DriverB",
+                icon: "image/car2.png"
+                //title: 'YOU ARE HERE!'
+            });
+            var marker3 = new google.maps.Marker({
+                position: pos3,
+                map: map,
+                // label: "DriverC",
+                icon: "image/car3.png"
+                //title: 'YOU ARE HERE!'
+            });
+            var marker4 = new google.maps.Marker({
+                position: pos4,
+                map: map,
+                // label: "DriverD",
+                icon: "image/car4.png"
+                //title: 'YOU ARE HERE!'
+            });
+            var marker5 = new google.maps.Marker({
+                position: pos5,
+                map: map,
+                // label: "DriverE",
+                icon: "image/car5.png"
+                //title: 'YOU ARE HERE!'
+            });
+            var marker6 = new google.maps.Marker({
+                position: pos6,
+                map: map,
+                // label: "DriverF",
+                icon: "image/car6.png"
+                //title: 'YOU ARE HERE!'
+            });
+            var marker7 = new google.maps.Marker({
+                position: pos7,
+                map: map,
+                // label: "DriverG",
+                icon: "image/car7.png"
+                //title: 'YOU ARE HERE!'
+            });
+            var marker8 = new google.maps.Marker({
+                position: pos8,
+                map: map,
+                // label: "DriverH",
+                icon: "image/car8.png"
+                //title: 'YOU ARE HERE!'
+            });
+
+        }
+    });
+// return pos8;
+ }
+    function calRoute() {
+
+        nearby();
+        var driver = pos8;
+        // window.alert(driver.lat);
+        var start1 = document.getElementById("start").value;
+        var dis = document.getElementById("dis");
+        var waitingTime = document.getElementById("waitingTime");
+        var pickTime = document.getElementById("pickTime");
+        var pickTime1 = document.getElementById("pickTime1");
+
+
+        var request = {
+
+            origin: driver,
+
+            destination: start1,
+
+            travelMode: google.maps.DirectionsTravelMode.DRIVING
+
+        };
+        directionsService.route(request, function (response, status) {
+
+            if (status == google.maps.DirectionsStatus.OK) {
+                directionsDisplay.setDirections(response);
+                dis.value = response.routes[0].legs[0].distance.value / 1000;
+                waitingTime.value = (dis.value / 0.805).toFixed(2);
+                // waitingTime.value = waitingTime.value.toFixed();
+                var now = new Date();
+                var s = now.getTime();
+                now.setTime(s + waitingTime.value * 1000 * 60);
+
+                var hh = now.getHours();
+                var mm = now.getMinutes();
+                pickTime.value = hh + ":" + mm;
+                pickTime1.value = pickTime.value;
+            }
+        });
+    }
+</script>
+
+<body onload="initialize()">
+<table class="ptable">
+    <tr class="prow">
+        <th class="halfcolumn">
+            <div class="page">
+                <div class="box1">
+
+                    <h1>Request<br> your ride<br> now</h1>
+                    <form class="box4">
+                        <input name="start" id="start" type="text" value="From"
+                               onkeyup="document.getElementById('origin').value=this.value"
+                               onblur="document.getElementById('origin').value=this.value"
+                               onfocus="if(value==defaultValue){value='';this.style.color='#000'}"
+                               onblur="if(!value){value=defaultValue;this.style.color='#999'}"
+                               style="color: rgb(0, 0, 0); width: 70%; height: 100%;">
+                    </form>
+                    <br>
+                    <form class="box5">
+                        <input name="end" id="end" type="text" value="To"
+                               onkeyup="document.getElementById('arrive').value=this.value"
+                               onblur="document.getElementById('arrive').value=this.value"
+                               onfocus="if(value==defaultValue){value='';this.style.color='#000'}"
+                               onblur="if(!value){value=defaultValue;this.style.color='#999'}"
+                               style="color: rgb(0, 0, 0); width: 70%; height: 100%;">
+                    </form>
+                    <br>
+                    <p>Model(car type):
+                        <select id="type" onblur="document.getElementById('Car').value=this.value">
+                            <option value="Economy">Economy</option>
+                            <option value="Comfort">Comfort</option>
+                            <option value="SUV">SUV</option>
+                            <option value="Sports Car">Sports Car</option>
+                        </select>
+                    </p>
+<!--                    <p>-->
+<!--                        <button class="box3" onclick="nearby()">Find the driver nearby</button>-->
+<!--                    </p>-->
+                    <p>
+                        <button class="box3" onclick="connectDriver()">Connect to Driver</button>
+                    </p>
+                    <p>
+                        <button class="box3" onclick="calRoute()">Request Now</button>
+                    </p>
+                    <p>
+                        <label for="dis">
+                            Driver To You(km):
+                        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" name="dis" id="dis" readonly="true"/>
+                    </p>
+                    <p>
+                        <label for="waitingTime">
+                            Estimate Waiting Time(min):
+                        </label>
+                        <input type="text" name="waitingTime" id="waitingTime" readonly="true"/>
+                    </p>
+
+
+                    <p>
+                        <label for="pickTime">
+                            Estimate Pick Up Time:
+                        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" name="pickTime" id="pickTime" readonly="true"/>
+                    </p>
+                    <p>
+                        <button class="box3" onclick="calcRoute()">Start the trip</button>
+                    </p>
+                    <form action="CheckOut">
+                        <p>
+                            <label for="origin">From: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <input type="text" name="origin" id="origin" readonly="true"/>
+
+                        </p>
+                        <p>
+                            <label for="arrive">To: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <input type="text" name="arrive" id="arrive" readonly="true"/>
+
+                        </p>
+<!--                        <p>-->
+
+<!--                            <label for="Car">Model: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+
+                            <input type="hidden" name="Car" id="Car" readonly="true"/>
+
+<!--                        </p>-->
+                        <p>
+
+                            <label for="distance">Distance (km): </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <input type="text" name="distance" id="distance" readonly="true"/>
+
+                        </p>
+                        <p>
+                            <label for="price">
+                                Price($):
+                            </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" name="price" id="price" readonly="true"/>
+                        </p>
+                        <p>
+                            <label for="travelTime">
+                                Estimate Travel Time(min):
+                            </label>&nbsp;&nbsp;
+                            <input type="text" name="travelTime" id="travelTime" readonly="true"/>
+                        </p>
+                        <p>
+                            <label for="ArrivalTime">
+                                Estimate DropOff Time:
+                            </label>&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="ArrivalTime" id="ArrivalTime" readonly="true"/>
+                        </p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;<input type="hidden" name="tip" id="tip" readonly="true">
+                        </p>
+                        <p>
+                            <button class="box3" type="submit">Trip Completed</button>
+                        </p>
+                    </form>
+                        <p>
+                            <label>
+                                Tips:
+                            </label>&nbsp;
+                            <button onblur="document.getElementById('tip').value=this.value" class="btn" id="10" name="10" value="0.1"> 10%</button>
+                            <button onblur="document.getElementById('tip').value=this.value" class="btn" id="15" name="15" value="0.15"> 15%</button>
+                            <button onblur="document.getElementById('tip').value=this.value"class="btn" id="20" name="20" value ="0.2"> 20%</button>
+                            <label>other:</label><input onblur="document.getElementById('tip').value=this.value/100"type="text" name="tip" id="other" value="">%
+                        </p>
+                        <br>
+
+                </div>
+            </div>
+        </th>
+        <th class="halfcolumn">
+            <div id="map" onload="initialize()"></div>
+        </th>
+    </tr>
+</table>
+</body>
+</body>
+</html>
